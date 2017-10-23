@@ -56,15 +56,66 @@
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/swiper.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/slick.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/index.js" type="text/javascript"></script>
 
     <?php if( is_home() ): ?>
 
       <script type="text/javascript">
         $(function(){
+
+          var mainSwiper = new Swiper('#main-slider', {
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            loop: true
+          });
+
+          $('#slider-room').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '#slider-room-thumbs'
+          });
+
+          $('#slider-room-thumbs').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '#slider-room',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+
+          var comunitySwiper = new Swiper('#comunity-slider', {
+            nextButton: '#comunity-section .swiper-button-next',
+            prevButton: '#comunity-section .swiper-button-prev',
+            // autoplay: 3000,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            autoplayDisableOnInteraction: false,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflow: {
+                rotate: 0,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows : true
+            }
+          });
+
+          $("#event-container").mCustomScrollbar({
+            theme:"rounded-dots",
+            scrollInertia:400
+          });
+
           $('.js-set-evento').on('click', function() {
             $('#form-evento-name').val($(this).data('event-name'));
             $('#form-evento-date').val($(this).data('event-date'));
+            $('#form-evento-img').val($(this).data('event-img'));
           });
 
           $('#form-for-who').change(function(){

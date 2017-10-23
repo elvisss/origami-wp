@@ -270,7 +270,7 @@
                                 <h2><?php echo $posts[0]->post_title; ?></h2>
                                 <p class="date-event"><?php echo $posts[1]->format('l, d \d\e F'); ?> - <?php the_field('evento_horario', $posts[0]->ID) ?></p>
                                 <p class="location-event"><?php the_field('evento_lugar', $posts[0]->ID) ?></p>
-                                <a class="link-event js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo $posts[0]->post_title; ?>" data-event-date="<?php the_field('evento_fecha', $posts[0]->ID) ?>">me apunto</a>
+                                <a class="link-event js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo $posts[0]->post_title; ?>" data-event-date="<?php the_field('evento_fecha', $posts[0]->ID) ?>" data-event-img="<?php echo get_the_post_thumbnail_url($posts[0]->ID, 'medium'); ?>">me apunto</a>
                               </div>
                             </div>
                           </div>

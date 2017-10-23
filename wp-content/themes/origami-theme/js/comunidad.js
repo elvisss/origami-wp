@@ -1,1 +1,0 @@
-$(function(){$(".navbar-custom").addClass("navbar-dark"),$(".navbar-custom li:nth-child(5)").addClass("nav-active")}),$("#gallery-comunity").slick({slidesToShow:1,slidesToScroll:1,asNavFor:"#gallery-comunity-thumbs"}),$("#gallery-comunity-thumbs").slick({slidesToShow:4,slidesToScroll:1,asNavFor:"#gallery-comunity",dots:!1,focusOnSelect:!0,autoplaySpeed:3e3});
