@@ -91,7 +91,7 @@
           var comunitySwiper = new Swiper('#comunity-slider', {
             nextButton: '#comunity-section .swiper-button-next',
             prevButton: '#comunity-section .swiper-button-prev',
-            // autoplay: 3000,
+            autoplay: 3000,
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
@@ -121,7 +121,7 @@
           });
 
           $('#form-for-who').change(function(){
-            if ($(this).val() == "para quien 1") {
+            if ($(this).val() == "freelance") {
               $('.js-business').hide();
             } else {
               $('.js-business').show();
@@ -138,7 +138,7 @@
       <script type="text/javascript">
         $(function(){
           $('#form-for-who').change(function(){
-            if ($(this).val() == "para quien 1") {
+            if ($(this).val() == "freelance") {
               $('.js-business').hide();
             } else {
               $('.js-business').show();

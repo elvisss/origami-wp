@@ -222,7 +222,7 @@
                           $month = 'Mayo';
                           break;
                       case '06':
-                          $month = 'Junii';
+                          $month = 'Junio';
                           break;
                       case '07':
                           $month = 'Julio';

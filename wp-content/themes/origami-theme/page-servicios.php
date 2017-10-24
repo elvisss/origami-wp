@@ -161,7 +161,7 @@
               <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
             </div>
             <div class="plan-review">
-              <p>Trae tu computadora portátil y con seguridad tendrás un esvpacio fijo para empezar a trabajar.</p>
+              <p>Trae tu computadora portátil y con seguridad tendrás un espacio fijo para empezar a trabajar.</p>
             </div>
             <ul class="plan-details">
               <li>
@@ -171,7 +171,7 @@
                 <div class="plan-detail">Escritorio flexible</div>
               </li>
               <li>
-                <p>((Reservado))</p>
+                <p>(Reservado)</p>
               </li>
               <li>
                 <div class="plan-detail">Estacionamiento para visitas</div>

@@ -82,7 +82,11 @@
                           <?php } ?>" data-slide="slide-<?php echo $idc; ?>">
                             <h2><a href="#"><?php echo get_the_title(); ?></a></h2>
                             <a class="date" href="#">
-                              <?php the_field('evento_fecha'); ?>
+                              <?php
+                                $date = get_field('evento_fecha');
+                                $date = new DateTime($date);
+                              ?>
+                              <?php echo $date->format('j/m/Y'); ?>
                             </a>
                           </div>
                       <?php
@@ -218,7 +222,7 @@
                     $month_name = 'Mayo';
                     break;
                 case '06':
-                    $month_name = 'Junii';
+                    $month_name = 'Junio';
                     break;
                 case '07':
                     $month_name = 'Julio';
@@ -295,6 +299,75 @@
         	<?php
         		$date = get_field('evento_fecha');
         		$date = new DateTime($date);
+
+            $month_event = '';
+            switch (date('m', strtotime(get_field('evento_fecha')))) {
+                case '01':
+                    $month_event = 'Enero';
+                    break;
+                case '02':
+                    $month_event = 'Febrero';
+                    break;
+                case '03':
+                    $month_event = 'Marzo';
+                    break;
+                case '04':
+                    $month_event = 'Abril';
+                    break;
+                case '05':
+                    $month_event = 'Mayo';
+                    break;
+                case '06':
+                    $month_event = 'Junio';
+                    break;
+                case '07':
+                    $month_event = 'Julio';
+                    break;
+                case '08':
+                    $month_event = 'Agosto';
+                    break;
+                case '09':
+                    $month_event = 'Setiembre';
+                    break;
+                case '10':
+                    $month_event = 'Octubre';
+                    break;
+                case '11':
+                    $month_event = 'Noviembre';
+                    break;
+                case '12':
+                    $month_event = 'Diciembre';
+                    break;
+                default:
+                    $month_event = 'Enero';
+            }
+
+            $day_event = '';
+            switch (date('w', strtotime(get_field('evento_fecha')))) {
+                case '1':
+                    $day_event = 'Lunes';
+                    break;
+                case '2':
+                    $day_event = 'Martes';
+                    break;
+                case '3':
+                    $day_event = 'Miércoles';
+                    break;
+                case '4':
+                    $day_event = 'Jueves';
+                    break;
+                case '5':
+                    $day_event = 'Viernes';
+                    break;
+                case '6':
+                    $day_event = 'Sábado';
+                    break;
+                case '0':
+                    $day_event = 'Domingo';
+                    break;
+                default:
+                    $day_event = 'Lunes';
+            }
         		array_push($dates, $date->format('\'d/m/Y\''));
         	?>
 
@@ -310,7 +383,7 @@
                           <div class="desc-main-event">
                             <a class="author" href="#" data-toggle="modal" data-target=".event-<?php echo $idc; ?>"><?php the_field('evento_sub_title') ?></a>
                             <p><?php the_field('evento_lugar') ?></p>
-                            <p><?php echo $date->format('l, d \d\e F'); ?> - <?php the_field('evento_horario') ?></p>
+                            <p><?php echo $day_event; ?>, <?php echo $date->format('d'); ?> de <?php echo $month_event ?>  - <?php the_field('evento_horario') ?></p>
                           </div>
                           <div class="social-main-event">
                             <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
@@ -343,7 +416,11 @@
               <div id="datepicker"></div>
             </div>
             <div class="aside-block">
-              <div style="height: 700px; width: 100%; background-color: #d1d1d1;"></div>
+                <?php
+                  if(function_exists('dynamic_sidebar')){
+                    dynamic_sidebar('Sidebar Widget');
+                  }
+                ?>
             </div>
           </aside>
         </div>
