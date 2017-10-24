@@ -30,7 +30,11 @@
                     <div class="feature-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
                     <div class="feature-links">
                       <div class="wrap-feature-links">
-                        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>" data-target=".me-apunto">Me apunto</a>
+                        <?php
+                          $date = get_field('evento_fecha');
+                          $date = new DateTime($date);
+                        ?>
+                        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
                         <a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-featured-<?php echo $idc; ?>">Ver más</a>
                       </div>
                     </div>
@@ -143,7 +147,11 @@
                   </div>
                 </div>
                 <div class="event-social">
-                  <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>">Me apunto</a>
+                  <?php
+                    $date = get_field('evento_fecha');
+                    $date = new DateTime($date);
+                  ?>
+                  <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
                   <a class="btn btn-social btn-facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(get_permalink()); ?>">
                     <i class="fa fa-facebook"></i>Share
                   </a>
@@ -305,7 +313,7 @@
                             <p><?php echo $date->format('l, d \d\e F'); ?> - <?php the_field('evento_horario') ?></p>
                           </div>
                           <div class="social-main-event">
-                            <a class="btn btn-main btn-sm js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>">Me apunto</a>
+                            <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
                             <a class="btn btn-social btn-facebook d-none d-md-inline-block" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(get_permalink()); ?>">
                               <i class="fa fa-facebook"></i>Share
                             </a>
@@ -387,7 +395,11 @@
                         </div>
                       </div>
                       <div class="event-social">
-                        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>">Me apunto</a>
+                        <?php
+                          $date = get_field('evento_fecha');
+                          $date = new DateTime($date);
+                        ?>
+                        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
                         <a class="btn btn-social btn-facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(get_permalink()); ?>">
                           <i class="fa fa-facebook"></i>Share
                         </a>

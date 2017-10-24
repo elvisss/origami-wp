@@ -154,6 +154,15 @@
       <script type="text/javascript">
         $(function(){
           $('.navbar-custom').addClass('navbar-dark');
+
+          $('.js-set-evento').on('click', function() {
+            $('#form-evento-name').val($(this).data('event-name'));
+            $('#form-evento-date').val($(this).data('event-date'));
+            $('#form-evento-img').val($(this).data('event-img'));
+            $('#form-evento-hour').val($(this).data('event-hour'));
+            $('#form-evento-place').val($(this).data('event-place'));
+          });
+          
         });
       </script>
 
@@ -222,6 +231,9 @@
           $('.js-set-evento').on('click', function() {
             $('#form-evento-name').val($(this).data('event-name'));
             $('#form-evento-date').val($(this).data('event-date'));
+            $('#form-evento-img').val($(this).data('event-img'));
+            $('#form-evento-hour').val($(this).data('event-hour'));
+            $('#form-evento-place').val($(this).data('event-place'));
           });
 
         });

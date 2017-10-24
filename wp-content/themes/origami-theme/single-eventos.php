@@ -38,7 +38,11 @@
 				        </div>
 				      </div>
 				      <div class="event-social">
-				        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-target=".me-apunto" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>">Me apunto</a>
+				        <?php
+				          $date = get_field('evento_fecha');
+				          $date = new DateTime($date);
+				        ?>
+				        <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php echo $date->format('j/m/Y'); ?>" data-target=".me-apunto" data-event-img="<?php the_post_thumbnail_url('large'); ?>" data-event-hour="<?php the_field('evento_horario') ?>" data-event-place="<?php the_field('evento_lugar') ?>">Me apunto</a>
 				        <a class="btn btn-social btn-facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(get_permalink()); ?>">
 				          <i class="fa fa-facebook"></i>Share
 				        </a>
@@ -56,5 +60,18 @@
     </div>
   </div>
 </section>
+
+<div class="modal fade me-apunto" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="modal-content-apunto">
+          <?php echo do_shortcode( '[contact-form-7 id="115" title="Subscripción a Evento"]' ); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>
