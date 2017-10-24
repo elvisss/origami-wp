@@ -165,7 +165,7 @@
 
             $posts = get_posts(array(
                 'posts_per_page' => -1,
-                'post_type' => 'evento',
+                'post_type' => 'eventos',
                 'meta_query'     => array(
                     array(
                         'key'       => 'evento_destacado',

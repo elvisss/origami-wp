@@ -149,6 +149,16 @@
 
     <?php endif; ?>
 
+    <?php if ( is_singular( 'eventos' ) ): ?>
+
+      <script type="text/javascript">
+        $(function(){
+          $('.navbar-custom').addClass('navbar-dark');
+        });
+      </script>
+
+    <?php endif; ?>
+
     <?php if( is_page('nosotros') ): ?>
 
       <script type="text/javascript">
@@ -159,21 +169,20 @@
 
     <?php endif; ?>
 
-    <?php if( is_page('eventos') ): ?>
+    <?php if( is_post_type_archive( 'eventos' )) : ?>
 
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/sly.min.js"></script>
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/bootstrap-datepicker.min.js" type="text/javascript"></script>
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/bootstrap-datepicker.es.min.js" type="text/javascript"></script>
+
       <script type="text/javascript">
         $(function(){
           $('.navbar-custom').addClass('navbar-dark');
 
           var $frame = $('#boxes-list-events');
           var $wrap = $frame.parent();
-          // Call Sly on frame
           $frame.sly({
             speed: 300,
-            // easing: 'easeOutExpo',
             activatePageOn: 'click',
             scrollBar: $wrap.find('.scrollbar'),
             scrollBy: 100,
@@ -183,38 +192,9 @@
             minHandleSize: 28
           });
 
-          $('#datepicker').datepicker({
-            language: 'es',
-            setDate: '10/13/2017',
-            todayHighlight: true,
-          }).on('changeDate', function(e){
-            console.log(e);
-          });
-
-          var myDate = [];
-          var data = ["10 27 2017","Thu May 29 2014 22:14:25 +0100"];
-          var arr = [new Date(2014,05,01), new Date(2014,05,04)]; // just testing
-
-          $.each(data, function(k, v){
-            var nd = new Date(v);
-            var ndd = nd.getDate()-1;
-            var ndm = nd.getMonth()+1;
-            var ndy = nd.getFullYear();
-            var ndg = [parseInt(ndy), parseInt(ndm), parseInt(ndd)];
-            myDate.push(new Date(ndg));
-            $('#log').append('<div>'+myDate+'</div>');
-          });
-
-          $('#datepicker').datepicker('setDates',data);
-
-          // $('#datepicker').on('changeDate', function() {
-          //     $('#my_hidden_input').val(
-          //         $('#datepicker').datepicker('getFormattedDate')
-          //     );
-          // });
-
           var swiper = new Swiper('#events-slider', {
             nextButton: '.swiper-button-next',
+      
             prevButton: '.swiper-button-prev',
             followFinger: false,
             freeMode: true,

@@ -1,9 +1,4 @@
-<?php
-/**
- * Template Name: Eventos
- */
-  get_header();
-?>
+<?php get_header(); ?>
 
 <section class="fluid-secion">
   <div class="container">
@@ -17,9 +12,9 @@
               <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
-                  'posts_per_page' => 10,
+                  'posts_per_page' => -1,
                   'paged' => $paged,
-                  'post_type' => 'evento',
+                  'post_type' => 'eventos',
                   'meta_key' => 'evento_destacado',
                   'meta_value' => '1',
                   'compare' => '='
@@ -64,9 +59,9 @@
                       <?php
                         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         $args = array(
-                          'posts_per_page' => 10,
+                          'posts_per_page' => -1,
                           'paged' => $paged,
-                          'post_type' => 'evento',
+                          'post_type' => 'eventos',
                           'meta_key' => 'evento_destacado',
                           'meta_value' => '1',
                           'compare' => '='
@@ -175,42 +170,125 @@
     <div class="container-events">
       <div class="row no-gutters">
         <div class="col-12 col-md-8" id="main-events">
+
+          <?php
+            if (isset($_GET['año'])) {
+              $year = $_GET['año']; 
+            } else {
+              $year = date('Y');
+            }
+            
+            if (isset($_GET['mes'])) {
+              $month = $_GET['mes'];
+            } else {
+              $month = date('m');
+            }
+
+            if (isset($_GET['dia'])) {
+              $day = $_GET['dia'];
+              $lastday = $_GET['dia'];
+            } else {
+              $day = '01';
+              $lastday = '31';
+            }
+
+            $month_name;
+            switch ($month) {
+                case '01':
+                    $month_name = 'Enero';
+                    break;
+                case '02':
+                    $month_name = 'Febrero';
+                    break;
+                case '03':
+                    $month_name = 'Marzo';
+                    break;
+                case '04':
+                    $month_name = 'Abril';
+                    break;
+                case '05':
+                    $month_name = 'Mayo';
+                    break;
+                case '06':
+                    $month_name = 'Junii';
+                    break;
+                case '07':
+                    $month_name = 'Julio';
+                    break;
+                case '08':
+                    $month_name = 'Agosto';
+                    break;
+                case '09':
+                    $month_name = 'Setiembre';
+                    break;
+                case '10':
+                    $month_name = 'Octubre';
+                    break;
+                case '11':
+                    $month_name = 'Noviembre';
+                    break;
+                case '12':
+                    $month_name = 'Diciembre';
+                    break;
+                default:
+                    $month_name = 'Enero';
+            }
+
+            $nextmonth = date('Y-m-d', strtotime('+1 month', strtotime($year.'-'.$month.'-01')));
+            $prevmonth = date('Y-m-d', strtotime('-1 month', strtotime($year.'-'.$month.'-01')));
+            $dates = array();
+
+          ?>
+
           <div class="top-main-events">
-            <h3>EVENTOS DEL MES</h3>
+            <div class="title-month">
+              <h3>EVENTOS DEL MES</h3>
+            </div>
+            <div class="months-carousel d-block d-md-none">
+              <div class="title-carousel">
+                <h4><?php echo $month ?><span><?php echo $month_name ?></span></h4>
+              </div>
+              <a class="arrow-month arrow-month_left" href="<?php echo home_url('eventos') . '?año=' . date('Y', strtotime($prevmonth)) . '&mes=' . date('m', strtotime($prevmonth)) ?>"></a>
+              <a class="arrow-month arrow-month_right" href="<?php echo home_url('eventos') . '?año=' . date('Y', strtotime($nextmonth)) . '&mes=' . date('m', strtotime($nextmonth)) ?>"></a>
+            </div>
           </div>
           <div class="body-main-events">
 
             <?php
-              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-              $args = array(
-                'posts_per_page' => -1,
-                'paged' => $paged,
-                'post_type' => 'evento',
-                'meta_key' => 'evento_fecha',
-                'orderby' => 'meta_value_num',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    'relation' => 'AND',
-                    array(
-                        'key' => 'evento_fecha',
-                        'value' => '20171001',
-                        'compare' => '>=',
-                    ),
-                    array(
-                        'key' => 'evento_fecha',
-                        'value' => '20171031',
-                        'compare' => '<=',
-                    ),
-                ),
-              );
-              $postslist2 = new WP_Query( $args );
-              $idc = 0;
+            	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            	$args = array(
+            	  'posts_per_page' => -1,
+            	  'paged' => $paged,
+            	  'post_type' => 'eventos',
+            	  'meta_key' => 'evento_fecha',
+            	  'orderby' => 'meta_value_num',
+            	  'order' => 'ASC',
+            	  'meta_query' => array(
+            	      'relation' => 'AND',
+            	      array(
+            	          'key' => 'evento_fecha',
+            	          'value' => $year . $month . $day,
+            	          'compare' => '>=',
+            	      ),
+            	      array(
+            	          'key' => 'evento_fecha',
+            	          'value' => $year . $month . $lastday,
+            	          'compare' => '<=',
+            	      ),
+            	  ),
+            	);
+            	$postslist2 = new WP_Query( $args );
+            	$idc = 0;
 
+            	if ( $postslist2->have_posts() ) :
+            	  while ( $postslist2->have_posts() ) : $postslist2->the_post(); $idc++;
             ?>
 
-            <?php if ( $postslist2->have_posts() ) : ?>
-
-              <?php while ( $postslist2->have_posts() ) : $postslist2->the_post(); $idc++; ?>
+        	<?php
+        		$date = get_field('evento_fecha');
+        		$date = new DateTime($date);
+        		array_push($dates, $date->format('\'d/m/Y\''));
+        	?>
 
                 <div class="main-event">
                   <div class="row no-gutters">
@@ -224,10 +302,6 @@
                           <div class="desc-main-event">
                             <a class="author" href="#" data-toggle="modal" data-target=".event-<?php echo $idc; ?>"><?php the_field('evento_sub_title') ?></a>
                             <p><?php the_field('evento_lugar') ?></p>
-                            <?php
-                              $date = get_field('evento_fecha');
-                              $date = new DateTime($date);
-                            ?>
                             <p><?php echo $date->format('l, d \d\e F'); ?> - <?php the_field('evento_horario') ?></p>
                           </div>
                           <div class="social-main-event">
@@ -245,26 +319,20 @@
                   </div>
                 </div>
 
-              <?php endwhile; ?>
+            <?php
+            		endwhile;
+            	else:
+            ?>
+            <p>No hay resultados</p>
 
-            <?php else : ?>
-
-              <p>no results</p>
-
-            <?php endif: ?>
+        <?php endif; ?>
 
           </div>
         </div>
         <div class="col-12 col-md-4 d-none d-md-block">
           <aside id="main-sidebar">
-            <?php
-              if(function_exists('dynamic_sidebar')){
-                  dynamic_sidebar('Sidebar Widget');
-              }
-            ?>
             <div class="aside-block">
               <div id="datepicker"></div>
-              <input id="my_hidden_input" type="hidden">
             </div>
             <div class="aside-block">
               <div style="height: 700px; width: 100%; background-color: #d1d1d1;"></div>
@@ -354,3 +422,52 @@
 </div>
 
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+
+  $(function(){
+
+    var url = '<?php echo home_url('eventos'); ?>';
+
+    var availableDates = [<?php echo implode(',', $dates) ?>];
+
+    function isInArray(array, value) {
+      return (array.find(item => {return item == value}) || []).length > 0;
+    }
+
+    $('#datepicker').datepicker({
+    	todayHighlight: true,
+    	maxViewMode: 1,
+    	language: 'es',
+    	daysOfWeekHighlighted: "1",
+    	defaultViewDate: '01/<?php echo $month ?>/<?php echo $year ?>',
+    	beforeShowDay: function(date) {
+	      var dmy = (date.getDate() > 9 ? date.getDate() : '0' + date.getDate() ) + "/" + ( date.getMonth() + 1 ) + "/" + date.getFullYear();
+	      if (isInArray(availableDates, dmy)) {
+	        return {
+	        	classes: 'active'
+	        };
+	      } else {
+	        return false;
+	      }
+		}
+    });
+
+    $('#datepicker').on('changeMonth', function(e){
+      var date = new Date(e.date);
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      window.location.replace(url + '?año=' +  year + '&mes=' + month);
+    });
+
+    $('#datepicker').on('changeDate', function(e){
+      var date = new Date(e.date);
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var day = date.getDate() > 9 ? date.getDate() : '0' + date.getDate();
+      window.location.replace(url + '?año=' +  year + '&mes=' + month + '&dia=' + day);
+    });
+
+  });
+
+</script>
