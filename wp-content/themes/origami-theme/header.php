@@ -48,11 +48,33 @@
             <div class="d-flex d-md-none justify-content-center">
               <nav class="menu-footer">
                 <p>Síguenos en:</p>
-                <?php wp_nav_menu( array(
-                  'container' => false,
-                  'theme_location' => 'social-menu',
-                  'items_wrap' => '<ul class="social-links">%3$s</ul>',
-                )); ?>
+                <ul class="social-links">
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/facebook.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/twitter.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/instagram.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/linkedin.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/google-plus.php'); ?>
+                    </a>
+                  </li>
+                </ul>
                 <h5>ORIGAMI COWORK</h5>
               </nav>
             </div>

@@ -39,11 +39,33 @@
             </div>
             <div class="col-12 col-md-3 d-none d-md-block">
               <div class="social-content d-flex align-items-center justify-content-center">
-                <?php wp_nav_menu( array(
-                  'container' => false,
-                  'theme_location' => 'social-menu',
-                  'items_wrap' => '<ul class="social-links">%3$s</ul>',
-                )); ?>
+                <ul class="social-links">
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/facebook.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/twitter.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/instagram.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/linkedin.php'); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com/" target="_blank">
+                      <?php include (TEMPLATEPATH . '/partials/google-plus.php'); ?>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
