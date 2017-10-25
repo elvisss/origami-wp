@@ -22,7 +22,7 @@
     </script>
     <!--End of Zendesk Chat Script-->
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <header id="main-header">
       <div class="full-width">
         <nav class="navbar navbar-expand-md navbar-dark p-0">

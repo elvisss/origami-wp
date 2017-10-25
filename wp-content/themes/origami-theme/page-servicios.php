@@ -215,7 +215,7 @@
                     <li>Tiempo de Contrato: indeterminado</li>
                     <li>Impresiones/Copias: 100 hojas por usuario</li>
                     <li>Cotización Válida: 7 días</li>
-                    <li>Horario de Atención:<span>Lun-Vie de 09:00 a 18:00 hrs</span><span>Sáb de 09:00 a 12:00 hrs</span></li>
+                    <li>Horario de Atención: <span>Lun-Vie de 09:00 a 18:00 hrs</span><br><span>Sáb de 09:00 a 12:00 hrs</span></li>
                   </ul>
                 </div>
               </div>

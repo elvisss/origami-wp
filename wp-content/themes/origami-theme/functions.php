@@ -25,6 +25,13 @@ if(function_exists('register_sidebar')) {
     ));
 }
 
+add_filter( 'body_class', 'my_neat_body_class');
+function my_neat_body_class( $classes ) {
+     if ( is_page('contacto') )
+          $classes[] = 'contact-page';
+     return $classes;
+}
+
 //Adding the Open Graph in the Language Attributes
 function add_opengraph_doctype( $output ) {
         return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
