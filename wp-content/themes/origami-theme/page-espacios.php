@@ -87,7 +87,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-1">
                 <div class="swiper-wrapper">
@@ -137,7 +140,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-2">
                 <div class="swiper-wrapper">
@@ -187,7 +193,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-3">
                 <div class="swiper-wrapper">
@@ -237,7 +246,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-4">
                 <div class="swiper-wrapper">
@@ -287,7 +299,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-5">
                 <div class="swiper-wrapper">
@@ -337,7 +352,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-6">
                 <div class="swiper-wrapper">
@@ -387,7 +405,10 @@
       <div class="modal-dialog full-modal">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="close-modal" data-dismiss="modal" aria-label="Close">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+            </div>
             <div class="modal-full-content spaces-wrapper-content">
               <div class="spaces-slider swiper-container swiper-button-white" id="space-slider-7">
                 <div class="swiper-wrapper">

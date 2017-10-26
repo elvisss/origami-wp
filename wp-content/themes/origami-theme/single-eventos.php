@@ -65,7 +65,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="close-modal" data-dismiss="modal" aria-label="Close">
+          <div class="horizontal"></div>
+          <div class="vertical"></div>
+        </div>
         <div class="modal-content-apunto">
           <?php echo do_shortcode( '[contact-form-7 id="115" title="Subscripción a Evento"]' ); ?>
         </div>
