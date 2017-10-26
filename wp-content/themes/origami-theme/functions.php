@@ -2,7 +2,6 @@
 
 register_nav_menus(array(
 	'primary-menu' => 'Menú Primario',
-	'social-menu' => 'Menú Social'
 ));
 
 add_theme_support('post-thumbnails');
