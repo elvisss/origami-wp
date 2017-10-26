@@ -342,7 +342,7 @@
           </div>
         </div>
       </div>
-      <div class="card col-12 col-md-4 order-md-3 content-plan">
+      <div class="card col-12 col-md-4 order-md-3 content-plan last-content-plan">
         <div class="card-header" id="headingThree" role="tab">
           <h2 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">MEMBRESIA PREMIUM
               <div class="accordion-ico">

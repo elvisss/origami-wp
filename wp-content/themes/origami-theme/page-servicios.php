@@ -145,7 +145,7 @@
           </div>
         </div>
       </div>
-      <div class="card col-12 col-md-6 content-plan">
+      <div class="card col-12 col-md-6 content-plan last-content-plan">
         <div class="card-header" id="headingTwo" role="tab">
           <h2 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">MEMBRESIA PREMIUM
               <div class="accordion-ico">
@@ -284,7 +284,7 @@
           </div>
         </div>
       </div>
-      <div class="card col-12 col-md-4 content-plan">
+      <div class="card col-12 col-md-4 content-plan last-content-plan">
         <div class="card-header" id="headingThree2" role="tab">
           <h2 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">AUDITORIO SUM
               <div class="accordion-ico">
