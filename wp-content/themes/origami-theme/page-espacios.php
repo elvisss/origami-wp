@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section class="fluid-secion" id="main-section">
+<section class="fluid-section" id="main-section">
   <div class="spaces-section">
     <div class="container-fluid">
       <div class="gallery-spaces row no-gutters">

@@ -31,7 +31,7 @@
     <div class="swiper-button-prev"></div>
   </div>
 </section>
-<section class="fluid-secion" id="review-section">
+<section class="fluid-section" id="review-section">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-7 col-xl-6">

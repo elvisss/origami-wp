@@ -4,7 +4,7 @@
  */
 	get_header();
 ?>
-<section class="fluid-secion" id="main-comunity">
+<section class="fluid-section" id="main-comunity">
   <div class="full-page">
     <div class="container">
       <div id="gallery-comunity">

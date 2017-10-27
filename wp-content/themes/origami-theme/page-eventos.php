@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section class="fluid-secion">
+<section class="fluid-section">
   <div class="container">
     <div id="events-section">
       <div class="main-events-section">
