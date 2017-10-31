@@ -194,37 +194,6 @@
       </div>
     </div>
   </div>
-  <div class="section-triangles wrap-conditions">
-    <div class="wrap-triangles">
-      <div class="container-fluid">
-        <div class="content-conditions">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8">
-              <h4>CONDICIONES</h4>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul>
-                    <li>Fecha de Pago: 1er día de cada mes</li>
-                    <li>Medio de Pago: Transferencia bancaría BCP US$ 94-1802634-1-33 CRAFT DESIGNERS S.A.C.</li>
-                    <li>Garantía: Correspondiente a un mes de servicios</li>
-                    <li>Entrega de Espacio: Previa firma de contrato y depósito de garantía</li>
-                  </ul>
-                </div>
-                <div class="col-12 col-md-6">
-                  <ul>
-                    <li>Tiempo de Contrato: indeterminado</li>
-                    <li>Impresiones/Copias: 100 hojas por usuario</li>
-                    <li>Cotización Válida: 7 días</li>
-                    <li>Horario de Atención: <span>Lun-Vie de 09:00 a 18:00 hrs</span><br><span>Sáb de 09:00 a 12:00 hrs</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="line-members">
     <h4 class="line-small">SALAS DE REUNIONES, DIRECTORIO Y AUDITORIO</h4>
   </div>

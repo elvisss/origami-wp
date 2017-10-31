@@ -441,8 +441,9 @@
             if ( $postslist->have_posts() ) :
               while ( $postslist->have_posts() ) : $postslist->the_post();
           ?>
-                <div class="swiper-slide" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-                  <div class="slider-room-content">
+                <div class="swiper-slide">
+                  <div class="swiper-comunity-bg" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+                  <div class="slider-comunity-content">
                     <p><?php echo get_the_excerpt(); ?></p>
                     <?php if( get_field('testimonio_autor') ): ?>
                       <h3><?php the_field('testimonio_autor'); ?></h3>

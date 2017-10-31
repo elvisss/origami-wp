@@ -16,7 +16,7 @@
                 <div class="list-footer-info">
                   <div class="info-detail info-address">
                     <div class="info-content d-flex align-items-center">
-                      <p>Av. Contralmirante Montero<br>Nº 421 Of. 6D – Magdalena del Mar</p>
+                      <p>Av. Contralmirante Montero Nº 421 Of. 6D<br/>Magdalena del Mar</p>
                     </div>
                   </div>
                   <div class="info-detail info-phone">
