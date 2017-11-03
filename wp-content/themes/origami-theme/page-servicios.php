@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section class="full-section" id="main-section">
+<section class="fluid-full-section" id="main-section">
   <div id="services-section">
     <div class="bg-full-section" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
     <div class="wrap-services">

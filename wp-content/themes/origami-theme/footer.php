@@ -71,13 +71,43 @@
           </div>
         </div>
       </div>
-    </footer><!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </footer>
+
+    <a class="cd-top" href="#0">Top</a>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/jquery.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/popper.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/bootstrap.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/swiper.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/slick.min.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $(function() {
+
+        var offset = 300,
+        offset_opacity = 1200,
+        scroll_top_duration = 700,
+        $back_to_top = $('.cd-top');
+
+        $(window).scroll(function(){
+          ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+          if( $(this).scrollTop() > offset_opacity ) { 
+            $back_to_top.addClass('cd-fade-out');
+          }
+        });
+
+        $back_to_top.on('click', function(event){
+          event.preventDefault();
+          $('body,html').animate({
+            scrollTop: 0 ,
+            }, scroll_top_duration
+          );
+        });
+
+      });
+    </script>
 
     <?php if( is_home() ): ?>
 

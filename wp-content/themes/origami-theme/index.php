@@ -457,8 +457,8 @@
         </div>
       </div>
     </div>
-    <div class="swiper-button-next swiper-button-black"></div>
-    <div class="swiper-button-prev swiper-button-black"></div>
+    <div class="swiper-button-next swiper-button-black d-none d-md-block"></div>
+    <div class="swiper-button-prev swiper-button-black d-none d-md-block"></div>
   </div>
 </section>
 
