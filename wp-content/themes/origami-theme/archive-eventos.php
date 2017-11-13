@@ -39,7 +39,51 @@
                       </div>
                     </div>
                     <div class="feature-body d-block d-md-none">
-                      <h2><?php echo get_the_title(); ?></h2><a class="date" href="#"></a>
+                      <h2><?php echo get_the_title(); ?></h2>
+                      <?php
+                        $month_event_short = '';
+                        switch (date('m', strtotime(get_field('evento_fecha')))) {
+                            case '01':
+                                $month_event_short = 'Enero';
+                                break;
+                            case '02':
+                                $month_event_short = 'Febrero';
+                                break;
+                            case '03':
+                                $month_event_short = 'Marzo';
+                                break;
+                            case '04':
+                                $month_event_short = 'Abril';
+                                break;
+                            case '05':
+                                $month_event_short = 'Mayo';
+                                break;
+                            case '06':
+                                $month_event_short = 'Junio';
+                                break;
+                            case '07':
+                                $month_event_short = 'Julio';
+                                break;
+                            case '08':
+                                $month_event_short = 'Agosto';
+                                break;
+                            case '09':
+                                $month_event_short = 'Setiembre';
+                                break;
+                            case '10':
+                                $month_event_short = 'Octubre';
+                                break;
+                            case '11':
+                                $month_event_short = 'Noviembre';
+                                break;
+                            case '12':
+                                $month_event_short = 'Diciembre';
+                                break;
+                            default:
+                                $month_event_short = 'Enero';
+                        }
+                      ?>
+                      <div class="date"><?php echo $month_event_short; ?> <?php echo date('j', strtotime(get_field('evento_fecha'))) ?></div>
                     </div>
                   </div>
 

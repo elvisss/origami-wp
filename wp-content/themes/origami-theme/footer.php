@@ -151,11 +151,22 @@
             slidesPerView: 'auto',
             loop: true,
             coverflow: {
-                rotate: 0,
-                stretch: 0,
-                depth: 300,
-                modifier: 1,
-                slideShadows : true
+              rotate: 0,
+              stretch: 0,
+              depth: 300,
+              modifier: 1,
+              slideShadows : true
+            },
+            breakpoints: {
+              640: {
+                coverflow: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 500,
+                  modifier: 1,
+                  slideShadows : true
+                }
+              }
             }
           });
 
