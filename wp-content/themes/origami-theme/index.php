@@ -67,88 +67,94 @@
     </div>
   </div>
 </section>
+
+<?php
+  $uploads = wp_upload_dir();
+  $baseurl = $uploads['baseurl'];
+?>
+
 <section class="fluid-section">
   <div class="row no-gutters">
     <div class="col-12 col-md-8">
       <div class="content-slider-room">
         <div id="slider-room">
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/sum1.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 1</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Auditorio SUM</h4>
+              <p>AFORO: 40 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/comedor1.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 2</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Comedor </h4>
+              <p>AFORO: 104 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/directorio-1.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 3</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Directorio I</h4>
+              <p>AFORO: 10 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/directorio2.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 4</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Directorio II</h4>
+              <p>AFORO: 10 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/sala_libre.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 5</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Sala Libre</h4>
+              <p>AFORO: 4 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/sala_origami1.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 6</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Sala Origami I</h4>
+              <p>AFORO: 6 Personas</p>
             </div>
           </div>
-          <div class="slide-room" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');">
+          <div class="slide-room" style="background-image: url('<?php echo $baseurl ?>/2017/11/salaverde.jpg');">
             <div class="slider-room-content">
-              <h4>Sala de Reuniones 7</h4>
-              <p>AFORO: 15 Personas</p>
+              <h4>Sala Origami II</h4>
+              <p>AFORO: 4 Personas</p>
             </div>
           </div>
         </div>
         <div class="d-none d-md-block" id="slider-room-thumbs">
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/sum1.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/comedor1.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/directorio-1.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/directorio2.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/sala_libre.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/sala_origami1.jpg');"></div>
             </div>
           </div>
           <div class="slide-thumbmail">
             <div class="slide-thumbnail-wrapper">
-              <div class="swiper-slide-thumb" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/room1.jpg');"></div>
+              <div class="swiper-slide-thumb" style="background-image: url('<?php echo $baseurl ?>/2017/11/salaverde.jpg');"></div>
             </div>
           </div>
         </div>
