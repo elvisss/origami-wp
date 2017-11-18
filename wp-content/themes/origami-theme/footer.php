@@ -41,7 +41,7 @@
               <div class="social-content d-flex align-items-center justify-content-center">
                 <ul class="social-links">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/origamicowork/" target="_blank">
                       <?php include (TEMPLATEPATH . '/partials/facebook.php'); ?>
                     </a>
                   </li>
@@ -51,7 +51,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/origami.cowork/" target="_blank">
                       <?php include (TEMPLATEPATH . '/partials/instagram.php'); ?>
                     </a>
                   </li>
@@ -61,7 +61,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://plus.google.com/" target="_blank">
+                    <a href="https://plus.google.com/106522681620298830785" target="_blank">
                       <?php include (TEMPLATEPATH . '/partials/google-plus.php'); ?>
                     </a>
                   </li>
