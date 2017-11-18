@@ -8,10 +8,12 @@
 
 			<div class="modal-content-event">
 				<div class="row no-gutters">
-				  <div class="col-12 col-lg-6">
-				    <div class="modal-event-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+				  <div class="col-12 col-xl-6">
+				    <figure class="modal-event-bg">
+				      <img src="<?php the_field('evento_portrait'); ?>">
+				    </figure>
 				  </div>
-				  <div class="col-12 col-lg-6">
+				  <div class="col-12 col-xl-6">
 				    <div class="wrap-content-event">
 				      <div class="event-title">
 				        <h2><?php echo get_the_title(); ?></h2>

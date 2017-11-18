@@ -12,12 +12,13 @@
       ?>
 
             <div class="swiper-slide">
-              <div class="main-banner-bg" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-                <div class="main-banner-content">
-                  <div class="pr-4 pl-4">
-                    <h3><?php echo get_the_title(); ?></h3>
-                    <p><?php echo get_the_excerpt(); ?></p>
-                  </div>
+              <figure class="main-banner-bg">
+                <img src="<?php the_post_thumbnail_url(); ?>">
+              </figure>
+              <div class="main-banner-content">
+                <div class="pr-4 pl-4">
+                  <h3><?php echo get_the_title(); ?></h3>
+                  <p><?php echo get_the_excerpt(); ?></p>
                 </div>
               </div>
             </div>

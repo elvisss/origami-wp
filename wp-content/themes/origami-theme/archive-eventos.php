@@ -10,14 +10,29 @@
             <div class="swiper-wrapper">
 
               <?php
+                $today = date( 'Y-m-d' );
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
                   'posts_per_page' => -1,
                   'paged' => $paged,
                   'post_type' => 'eventos',
-                  'meta_key' => 'evento_destacado',
-                  'meta_value' => '1',
-                  'compare' => '='
+                  'meta_key' => 'evento_fecha',
+                  'orderby' => 'meta_value_num',
+                  'order' => 'ASC',
+                  'meta_query' => array(
+                      'relation' => 'AND',
+                      array(
+                          'key' => 'evento_destacado',
+                          'value' => '1',
+                          'compare' => '=',
+                      ),
+                      array(
+                          'key' => 'evento_fecha',
+                          'value' => $today,
+                          'compare' => '>=',
+                          'type' => 'DATE'
+                      ),
+                  ),
                 );
                 $postslist = new WP_Query( $args );
                 $idc = 0;
@@ -27,7 +42,12 @@
               ?>
 
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="<?php the_post_thumbnail_url(); ?>" media="(min-width: 768px)"></source>
+                        <img srcset="<?php the_field('evento_portrait'); ?>" />
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links">
                         <?php
@@ -110,9 +130,23 @@
                           'posts_per_page' => -1,
                           'paged' => $paged,
                           'post_type' => 'eventos',
-                          'meta_key' => 'evento_destacado',
-                          'meta_value' => '1',
-                          'compare' => '='
+                          'meta_key' => 'evento_fecha',
+                          'orderby' => 'meta_value_num',
+                          'order' => 'ASC',
+                          'meta_query' => array(
+                              'relation' => 'AND',
+                              array(
+                                  'key' => 'evento_destacado',
+                                  'value' => '1',
+                                  'compare' => '=',
+                              ),
+                              array(
+                                  'key' => 'evento_fecha',
+                                  'value' => $today,
+                                  'compare' => '>=',
+                                  'type' => 'DATE'
+                              ),
+                          ),
                         );
                         $postslist = new WP_Query( $args );
                         $idc = 0;
@@ -168,10 +202,12 @@
         </div>
         <div class="modal-content-event">
           <div class="row no-gutters">
-            <div class="col-12 col-lg-6">
-              <div class="modal-event-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+            <div class="col-12 col-xl-6">
+              <figure class="modal-event-bg">
+                <img src="<?php the_field('evento_portrait'); ?>">
+              </figure>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-xl-6">
               <div class="wrap-content-event">
                 <div class="event-title">
                   <h2><?php echo get_the_title(); ?></h2>
@@ -228,7 +264,7 @@
   <div class="container">
     <div class="container-events">
       <div class="row no-gutters">
-        <div class="col-12 col-md-8" id="main-events">
+        <div class="col-12 col-lg-8" id="main-events">
 
           <?php
             if (isset($_GET['año'])) {
@@ -457,8 +493,8 @@
 
           </div>
         </div>
-        <div class="col-12 col-md-4 d-none d-md-block">
-          <aside id="main-sidebar">
+        <div class="col-12 col-lg-4">
+          <aside id="main-sidebar" class="d-none d-lg-block">
             <div class="aside-block">
               <div id="datepicker"></div>
             </div>
@@ -492,10 +528,12 @@
               </div>
               <div class="modal-content-event">
                 <div class="row no-gutters">
-                  <div class="col-12 col-lg-6">
-                    <div class="modal-event-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+                  <div class="col-12 col-xl-6">
+                    <figure class="modal-event-bg">
+                      <img src="<?php the_field('evento_portrait'); ?>">
+                    </figure>
                   </div>
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-xl-6">
                     <div class="wrap-content-event">
                       <div class="event-title">
                         <h2><?php echo get_the_title(); ?></h2>

@@ -46,7 +46,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.twitter.com/" target="_blank">
+                    <a href="https://twitter.com/OrigamiCowork" target="_blank">
                       <?php include (TEMPLATEPATH . '/partials/twitter.php'); ?>
                     </a>
                   </li>
@@ -56,7 +56,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/" target="_blank">
+                    <a href="https://www.linkedin.com/company/origamicowork/" target="_blank">
                       <?php include (TEMPLATEPATH . '/partials/linkedin.php'); ?>
                     </a>
                   </li>

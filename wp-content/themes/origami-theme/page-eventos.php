@@ -32,7 +32,12 @@
               ?>
 
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="<?php the_post_thumbnail_url(); ?>" media="(min-width: 768px)"></source>
+                        <img srcset="<?php the_field('evento_portrait'); ?>" />
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links">
                         <a class="btn btn-main js-set-evento" href="#" data-toggle="modal" data-event-name="<?php echo get_the_title(); ?>" data-event-date="<?php the_field('evento_fecha') ?>" data-target=".me-apunto">Me apunto</a>
@@ -177,7 +182,7 @@
   <div class="container">
     <div class="container-events">
       <div class="row no-gutters">
-        <div class="col-12 col-md-8" id="main-events">
+        <div class="col-12 col-lg-8" id="main-events">
           <div class="top-main-events">
             <h3>EVENTOS DEL MES</h3>
           </div>
@@ -258,14 +263,14 @@
 
           </div>
         </div>
-        <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="col-12 col-lg-4">
           <aside id="main-sidebar">
             <?php
               if(function_exists('dynamic_sidebar')){
                   dynamic_sidebar('Sidebar Widget');
               }
             ?>
-            <div class="aside-block">
+            <div class="aside-block d-none d-lg-block">
               <div id="datepicker"></div>
               <input id="my_hidden_input" type="hidden">
             </div>
