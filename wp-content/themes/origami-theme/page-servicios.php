@@ -135,12 +135,6 @@
               <li>
                 <p>(café, té y agua)</p>
               </li>
-              <li>
-                <div class="plan-detail">Welcome pack</div>
-              </li>
-              <li>
-                <p>(materiales básicos de escritorio)</p>
-              </li>
             </ul>
           </div>
         </div>
@@ -168,7 +162,7 @@
                 <div class="plan-detail">Beneficios generales</div>
               </li>
               <li>
-                <div class="plan-detail">Escritorio flexible</div>
+                <div class="plan-detail">Escritorio fijo</div>
               </li>
               <li>
                 <p>(Reservado)</p>
@@ -180,13 +174,10 @@
                 <div class="plan-detail">Autoservicio cafetería</div>
               </li>
               <li>
-                <p>(café, té y agua)</p>
+                <p>(café, té, agua y cerveza)</p>
               </li>
               <li>
                 <div class="plan-detail">Welcome pack</div>
-              </li>
-              <li>
-                <p>(Agenda y materiales básicos de escritorio)</p>
               </li>
             </ul>
           </div>
@@ -263,14 +254,14 @@
         </div>
         <div class="collapse" id="collapseThree2" role="tabpanel" aria-labelledby="headingThree2" data-parent="#second-accordion">
           <div class="card-body box-plan">
-            <h2>DIRECTORIO I &amp; II</h2>
+            <h2>DIRECTORIO SUM</h2>
             <div class="plan-content-price">
               <div class="plan-price">$80</div>
               <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
             </div>
             <div class="plan-review">
               <p>Es perfecto para eventos de lanzamiento, reuniones anuales de planeación, talleres o eventos networking.</p>
-              <p>Está situado en el 13vo piso en el Edificio</p>
+              <p>Está situado en el 13vo piso en el Edificio Prime Tower.</p>
               <div class="sub-review">
                 <p><b>Aforo:&nbsp;</b><span>40 perrsonas</span></p>
                 <p><b>Fecha y Horario de Uso:</b><br><span>L – V de 09:00 hrs – 18:00 hrs</span></p>

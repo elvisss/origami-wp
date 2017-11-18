@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="full-section" id="main-section">
+<section class="fluid-full-section" id="main-section">
   <div class="swiper-container swiper-button-white" id="main-slider">
     <div class="swiper-wrapper">
       <?php
@@ -338,12 +338,6 @@
               <li>
                 <p>(café, té y agua)</p>
               </li>
-              <li>
-                <div class="plan-detail">Welcome pack</div>
-              </li>
-              <li>
-                <p>(materiales básicos de escritorio)</p>
-              </li>
             </ul>
           </div>
         </div>
@@ -371,7 +365,7 @@
                 <div class="plan-detail">Beneficios generales</div>
               </li>
               <li>
-                <div class="plan-detail">Escritorio flexible</div>
+                <div class="plan-detail">Escritorio fijo</div>
               </li>
               <li>
                 <p>(Reservado)</p>
@@ -387,9 +381,6 @@
               </li>
               <li>
                 <div class="plan-detail">Welcome pack</div>
-              </li>
-              <li>
-                <p>(Agenda y materiales básicos de escritorio)</p>
               </li>
             </ul>
           </div>
