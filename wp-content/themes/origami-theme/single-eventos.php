@@ -29,7 +29,80 @@
 				        <div class="box-event-info">
 				          <div class="info-img d-none d-md-block"><i class="fa fa-clock-o"></i></div>
 				          <div class="info-content">
-				            <p><?php the_field('evento_fecha') ?> - <?php the_field('evento_horario') ?></p>
+				          	<?php
+		          				$date = get_field('evento_fecha');
+		          				$date = new DateTime($date);
+
+			          		    $month_event = '';
+			          		    switch (date('m', strtotime(get_field('evento_fecha')))) {
+			          		        case '01':
+			          		            $month_event = 'Enero';
+			          		            break;
+			          		        case '02':
+			          		            $month_event = 'Febrero';
+			          		            break;
+			          		        case '03':
+			          		            $month_event = 'Marzo';
+			          		            break;
+			          		        case '04':
+			          		            $month_event = 'Abril';
+			          		            break;
+			          		        case '05':
+			          		            $month_event = 'Mayo';
+			          		            break;
+			          		        case '06':
+			          		            $month_event = 'Junio';
+			          		            break;
+			          		        case '07':
+			          		            $month_event = 'Julio';
+			          		            break;
+			          		        case '08':
+			          		            $month_event = 'Agosto';
+			          		            break;
+			          		        case '09':
+			          		            $month_event = 'Setiembre';
+			          		            break;
+			          		        case '10':
+			          		            $month_event = 'Octubre';
+			          		            break;
+			          		        case '11':
+			          		            $month_event = 'Noviembre';
+			          		            break;
+			          		        case '12':
+			          		            $month_event = 'Diciembre';
+			          		            break;
+			          		        default:
+			          		            $month_event = 'Enero';
+			          		    }
+
+			          		    $day_event = '';
+			          		    switch (date('w', strtotime(get_field('evento_fecha')))) {
+			          		        case '1':
+			          		            $day_event = 'Lunes';
+			          		            break;
+			          		        case '2':
+			          		            $day_event = 'Martes';
+			          		            break;
+			          		        case '3':
+			          		            $day_event = 'Miércoles';
+			          		            break;
+			          		        case '4':
+			          		            $day_event = 'Jueves';
+			          		            break;
+			          		        case '5':
+			          		            $day_event = 'Viernes';
+			          		            break;
+			          		        case '6':
+			          		            $day_event = 'Sábado';
+			          		            break;
+			          		        case '0':
+			          		            $day_event = 'Domingo';
+			          		            break;
+			          		        default:
+			          		            $day_event = 'Lunes';
+			          		    }
+				          	?>
+				          	<p><?php echo $day_event; ?>, <?php echo $date->format('d'); ?> de <?php echo $month_event ?>  - <?php the_field('evento_horario') ?></p>
 				          </div>
 				        </div>
 				      </div>
