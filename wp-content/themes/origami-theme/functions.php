@@ -17,7 +17,7 @@ if(function_exists('register_sidebar')) {
     register_sidebar(array(
         'id' => 'sidebar-1',
         'name' => 'Sidebar Widget',
-        'before_widget' => '<div>', 
+        'before_widget' => '<div class="aside-widget">', 
         'after_widget' => '</div>',
         'before_title' => '<h5>',
         'after_title' => '</h5>',

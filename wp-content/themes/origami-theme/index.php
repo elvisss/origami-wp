@@ -12,8 +12,8 @@
       ?>
 
             <div class="swiper-slide">
-              <figure class="main-banner-bg">
-                <img src="<?php the_post_thumbnail_url(); ?>">
+              <figure class="main-banner-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                <img class="d-md-none" src="<?php the_post_thumbnail_url(); ?>" />
               </figure>
               <div class="main-banner-content">
                 <div class="pr-4 pl-4">
@@ -378,7 +378,7 @@
                 <div class="plan-detail">Autoservicio cafetería</div>
               </li>
               <li>
-                <p>(café, té y agua)</p>
+                <p>(café, té, agua y cerveza)</p>
               </li>
               <li>
                 <div class="plan-detail">Welcome pack</div>
