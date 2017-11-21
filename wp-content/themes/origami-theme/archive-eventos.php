@@ -42,11 +42,8 @@
               ?>
 
                   <div class="swiper-slide">
-                    <figure class="feature-bg">
-                      <picture>
-                        <source srcset="<?php the_post_thumbnail_url(); ?>" media="(min-width: 768px)"></source>
-                        <img srcset="<?php the_field('evento_portrait'); ?>" />
-                      </picture>
+                    <figure class="feature-bg" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+                      <img class="d-md-none" src="<?php the_field('evento_portrait'); ?>" />
                     </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links">
